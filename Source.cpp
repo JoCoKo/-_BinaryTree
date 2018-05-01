@@ -6,23 +6,32 @@ using namespace std;
 int main()
 {
 	Tree* firstTree = new Tree(10);
-	firstTree->print();
 	firstTree->add(5);
-	firstTree->print();
 	firstTree->add(20);
-	firstTree->print();
 	firstTree->add(0);
-	firstTree->print();
 	firstTree->add(40);
-	firstTree->print();
 	firstTree->add(-10);
-	firstTree->print();
 	firstTree->add(9000);
-	firstTree->print();
 	firstTree->add(20);
+
+	firstTree->setAllLeftCount();
+
 	firstTree->print();
-	firstTree->deleteVal(20);
-	firstTree->print();
+/*	for (int i = 0; i < 8; i++)
+	{
+		firstTree[i];
+	}*/
+	for (size_t i = 0; i < 7; i++)
+	{
+		int k = (*firstTree)[i];
+		cout << "tree[" << i << "]=" << k << endl;
+	}
+	cout << "change" << endl;
+	for (size_t i = 0; i < 7; i++)
+	{
+		(*firstTree)[i] = i * 10;
+		cout << "tree[" << i << "]=" << (*firstTree)[i] << endl;
+	}
 	getchar();
 	return 0;
 }
