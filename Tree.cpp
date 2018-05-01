@@ -51,7 +51,7 @@ void Tree::printRecur(Node* pNode)
 	if (pNode != NULL)
 	{
 		printRecur(pNode->left);
-		std::cout << pNode->value << ' ';
+		std::cout << pNode->countLeft << ":" << pNode->value << ' ';
 		printRecur(pNode->right);
 	}
 }
@@ -98,7 +98,7 @@ void Tree::setLeftCount(Node* pNode, int& i)
 		return;
 	setLeftCount(successor,i);
 };
-int Tree::operator[](int n)
+int& Tree::operator[](int n)
 {
 	Node* pNode = root;
 	while (n != pNode->countLeft)
@@ -108,6 +108,6 @@ int Tree::operator[](int n)
 		else
 			pNode = pNode->right;
 	}
-	std::cout << pNode->value;
+	// std::cout << pNode->value;
 	return pNode->value;
 };

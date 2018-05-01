@@ -26,7 +26,7 @@ public:
 	//2 новые функции по созданию leftcount
 	void setLeftCount(Node*, int&);
 	void setAllLeftCount();
-	int operator[] (int);
+	int& operator[] (int);
 
 private:
 	void deleteRecur(Node**, int);

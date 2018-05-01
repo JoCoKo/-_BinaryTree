@@ -21,7 +21,17 @@ int main()
 	{
 		firstTree[i];
 	}*/
-	firstTree[1];
+	for (size_t i = 0; i < 7; i++)
+	{
+		int k = (*firstTree)[i];
+		cout << "tree[" << i << "]=" << k << endl;
+	}
+	cout << "change" << endl;
+	for (size_t i = 0; i < 7; i++)
+	{
+		(*firstTree)[i] = i * 10;
+		cout << "tree[" << i << "]=" << (*firstTree)[i] << endl;
+	}
 	getchar();
 	return 0;
 }
