@@ -23,12 +23,11 @@ public:
 	bool add(int);
 	void print();
 	void deleteVal(int);
-	//2 новые функции по созданию leftcount
-	void setLeftCount(Node*, int&);
 	void setAllLeftCount();
 	int& operator[] (int);
 
 private:
+	void setLeftCount(Node*, int&);
 	void deleteRecur(Node**, int);
 	int minRecur(Node*);
 	void printRecur(Node*);
